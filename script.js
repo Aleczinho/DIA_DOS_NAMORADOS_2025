@@ -53,6 +53,7 @@ function startPetalRain() {
     audio.pause();
     ico.textContent = '🔊'; 
   }
+});
 
 
 window.onload = showSavedMessage;
