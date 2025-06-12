@@ -31,7 +31,6 @@ function showFlowers() {
 function startPetalRain() {
   const container = document.getElementById('petalContainer');
 
-  // Limpa antes
   container.innerHTML = '';
 
   for (let i = 0; i < 20; i++) {
@@ -45,15 +44,17 @@ function startPetalRain() {
 }
 
 function toggleVolume() {
+  document.querySelector("#volumeToggle").addEventListener("click", () => {
   const audio = document.querySelector('audio');
-  const btn = document.getElementById('volumeToggle');
-
-  if (audio.volume > 0) {
-    audio.volume = 0;
-    btn.textContent = '🔇';
+  const ico = document.querySelector("#volumeToggle");
+  if (audio.paused) {
+    audio.play();
+    ico.textContent = '🔇'; 
   } else {
-    audio.volume = 1;
-    btn.textContent = '🔊';
+    audio.pause();
+    ico.textContent = '🔊'; 
+  }
+});
   }
 }
 
