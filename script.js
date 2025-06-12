@@ -43,7 +43,6 @@ function startPetalRain() {
   }
 }
 
-function toggleVolume() {
   document.querySelector("#volumeToggle").addEventListener("click", () => {
   const audio = document.querySelector('audio');
   const ico = document.querySelector("#volumeToggle");
@@ -54,8 +53,6 @@ function toggleVolume() {
     audio.pause();
     ico.textContent = '🔊'; 
   }
-});
-  }
-}
+
 
 window.onload = showSavedMessage;
